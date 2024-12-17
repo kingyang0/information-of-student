@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>添加学生信息</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-image: url('/static/8e8298e2b9644d5f.jpg.webp?v=3'); /* 替换为你的背景图片路径 */
+            background-size: cover;
+            background-position: center;
+            color: #333;
+        }
+
+        .form-container {
+            background: rgba(255, 255, 255, 0.9);
+            padding: 30px;
+            max-width: 400px;
+            margin: 50px auto;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        .form-container h1 {
+            text-align: center;
+            margin-bottom: 20px;
+            font-size: 24px;
+            color: #444;
+        }
+
+        .form-container input, .form-container button {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 14px;
+        }
+
+        .form-container input:focus {
+            border-color: #007BFF;
+            outline: none;
+            box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+        }
+
+        .form-container button {
+            background-color: #007BFF;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        .form-container button:hover {
+            background-color: #0056b3;
+        }
+
+        .form-container small {
+            display: block;
+            text-align: center;
+            margin-top: 10px;
+            color: #555;
+        }
+    </style>
+</head>
+<body>
+    <div class="form-container">
+        <h1>添加学生信息</h1>
+        <form action="http://127.0.0.1:5000/add_student" method="post">
+            <input type="text" name="student_number" placeholder="学号" required>
+            <input type="text" name="name" placeholder="姓名" required>
+            <input type="number" name="age" placeholder="年龄" min="0" required>
+            <input type="text" name="department" placeholder="系" required>
+            <input type="text" name="graduation_status" placeholder="毕业状态" required>
+            <input type="text" name="employment" placeholder="就业去向" required>
+            <button type="submit">添加学生</button>
+        </form>
+        <small>请填写所有字段以添加学生信息</small>
+    </div>
+</body>
+</html>

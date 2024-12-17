@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>确认删除</title>
+    <style>
+        /* 全局样式 */
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: linear-gradient(135deg, #ff6b6b, #feca57);
+            color: #333;
+        }
+
+        /* 容器样式 */
+        .container {
+            background-color: rgba(255, 255, 255, 0.95);
+            padding: 30px 40px;
+            border-radius: 12px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+            max-width: 450px;
+            text-align: center;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .container:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+        }
+
+        /* 标题样式 */
+        h1 {
+            font-size: 24px;
+            margin-bottom: 15px;
+            color: #e74c3c;
+            font-weight: bold;
+        }
+
+        /* 提示信息 */
+        p {
+            font-size: 18px;
+            margin-bottom: 25px;
+            color: #555;
+            line-height: 1.5;
+        }
+
+        /* 按钮容器 */
+        .button-container {
+            display: flex;
+            justify-content: space-between;
+            gap: 15px;
+        }
+
+        /* 按钮样式 */
+        .button-container button,
+        .button-container a {
+            flex: 1;
+            padding: 12px;
+            border: none;
+            border-radius: 8px;
+            font-size: 16px;
+            text-decoration: none;
+            text-align: center;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+        }
+
+        /* 确认按钮样式 */
+        .delete-button {
+            background-color: #e74c3c;
+            color: #fff;
+        }
+
+        .delete-button:hover {
+            background-color: #c0392b;
+            transform: scale(1.05);
+        }
+
+        /* 取消按钮样式 */
+        .cancel-button {
+            background-color: #bdc3c7;
+            color: #2c3e50;
+        }
+
+        .cancel-button:hover {
+            background-color: #95a5a6;
+            transform: scale(1.05);
+        }
+
+        /* 响应式设计 */
+        @media (max-width: 480px) {
+            .container {
+                padding: 20px;
+            }
+
+            h1 {
+                font-size: 20px;
+            }
+
+            p {
+                font-size: 16px;
+            }
+
+            .button-container button,
+            .button-container a {
+                font-size: 14px;
+                padding: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>确认删除</h1>
+        <p>您确定要删除学生 <strong>{{ student_number }}</strong> 的信息吗？<br>此操作将永久删除数据，无法撤销。</p>
+        <form method="POST">
+            <div class="button-container">
+                <button type="submit" class="delete-button">确认删除</button>
+                <a href="/" class="cancel-button">取消</a>
+            </div>
+        </form>
+    </div>
+</body>
+</html>
