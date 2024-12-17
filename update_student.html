@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>更新学生信息</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f4f4f4;
+            background-image: url('/static/8e8298e2b9644d5f.jpg.webp?v=5');
+        }
+
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        form label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+
+        form input {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+
+        form button {
+            width: 100%;
+            padding: 12px;
+            background-color: #007BFF;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        form button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>更新学生信息</h1>
+        <form method="POST">
+            <label for="name">姓名:</label>
+            <input type="text" id="name" name="name" value="{{ student[1] }}" required>
+
+            <label for="age">年龄:</label>
+            <input type="number" id="age" name="age" value="{{ student[2] }}" required>
+
+            <label for="department">系:</label>
+            <input type="text" id="department" name="department" value="{{ student[3] }}" required>
+
+            <label for="graduation_status">毕业状态:</label>
+            <input type="text" id="graduation_status" name="graduation_status" value="{{ student[4] }}" required>
+
+            <label for="employment">就业去向:</label>
+            <input type="text" id="employment" name="employment" value="{{ student[5] }}" required>
+
+            <button type="submit">保存更改</button>
+        </form>
+    </div>
+</body>
+</html>

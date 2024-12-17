@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>用户注册</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background-image: url('/static/8e8298e2b9644d5f.jpg.webp');/* 替换为你的背景图片路径 */
+            background-size: cover;
+            background-position: center;
+            color: #fff;
+        }
+
+        .register-container {
+            background: rgba(255, 255, 255, 0.9);
+            max-width: 400px;
+            padding: 30px;
+            margin: 100px auto;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+            text-align: center;
+        }
+
+        .register-container h1 {
+            font-size: 26px;
+            margin-bottom: 20px;
+            color: #333;
+        }
+
+        .register-container label {
+            display: block;
+            text-align: left;
+            margin-bottom: 5px;
+            font-size: 14px;
+            color: #555;
+        }
+
+        .register-container input {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 14px;
+        }
+
+        .register-container input:focus {
+            border-color: #007BFF;
+            outline: none;
+            box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+        }
+
+        .register-container button {
+            width: 100%;
+            padding: 12px;
+            background-color: #007BFF;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .register-container button:hover {
+            background-color: #0056b3;
+        }
+
+        .register-container .note {
+            font-size: 14px;
+            color: #555;
+            margin-top: 10px;
+        }
+
+        .register-container .note a {
+            color: #007BFF;
+            text-decoration: none;
+        }
+
+        .register-container .note a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="register-container">
+        <h1>用户注册</h1>
+        <form action="/register" method="post">
+            <label for="username">账号:</label>
+            <input type="text" id="username" name="username" placeholder="请输入账号" required>
+            
+            <label for="password">密码:</label>
+            <input type="password" id="password" name="password" placeholder="请输入密码" required>
+            
+            <button type="submit">注册</button>
+        </form>
+        <div class="note">
+            已有账号？ <a href="login">点击登录</a>
+        </div>
+    </div>
+</body>
+</html>
