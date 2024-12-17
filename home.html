@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>欢迎页面</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background-image: url('/static/8e8298e2b9644d5f.jpg.webp?v=2');/* 替换为你的背景图片路径 */
+            background-size: cover;
+            background-position: center;
+            color: #fff;
+        }
+
+        .welcome-container {
+            text-align: center;
+            padding: 50px;
+            background: rgba(0, 0, 0, 0.6);
+            margin: 100px auto;
+            max-width: 600px;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+        }
+
+        .welcome-container h2 {
+            font-size: 28px;
+            margin-bottom: 20px;
+        }
+
+        .welcome-container p {
+            font-size: 18px;
+            margin-bottom: 30px;
+        }
+
+        .welcome-container a {
+            display: inline-block;
+            margin: 10px;
+            padding: 12px 20px;
+            font-size: 16px;
+            text-decoration: none;
+            background-color: #007BFF;
+            color: #fff;
+            border-radius: 5px;
+            transition: all 0.3s ease-in-out;
+        }
+
+        .welcome-container a:hover {
+            background-color: #0056b3;
+            box-shadow: 0 4px 10px rgba(0, 123, 255, 0.5);
+        }
+
+        .welcome-container .features {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin-top: 20px;
+        }
+
+        .welcome-container .feature-item {
+            margin: 10px;
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.8);
+            color: #333;
+            border-radius: 10px;
+            text-align: center;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+            flex: 1 1 200px;
+            max-width: 250px;
+        }
+
+        .welcome-container .feature-item:hover {
+            background: #f0f0f0;
+            transform: translateY(-5px);
+            transition: all 0.3s ease;
+        }
+    </style>
+</head>
+<body>
+    <div class="welcome-container">
+        <h2>欢迎</h2>
+        <p>请选择你想要执行的操作：</p>
+        <div class="features">
+            <div class="feature-item">
+                <a href="/add_student">添加学生信息</a>
+            </div>
+            <div class="feature-item">
+                <a href="/view_students">查看学生信息</a>
+            </div>
+            <div class="feature-item">
+                <a href="/update_student">更新学生信息</a>
+            </div>
+            <div class="feature-item">
+                <a href="/delete_student">删除学生信息</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>用户登录</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-image: url('/static/nimg.ws.126.net.jpeg'); /* 替换为你的背景图片路径 */
+            background-size: cover;
+            background-position: center;
+            color: #333;
+        }
+
+        .login-container {
+            background: rgba(255, 255, 255, 0.9);
+            padding: 30px;
+            max-width: 400px;
+            margin: 100px auto;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        .login-container h1 {
+            text-align: center;
+            margin-bottom: 20px;
+            font-size: 26px;
+            color: #444;
+        }
+
+        .login-container label {
+            font-size: 14px;
+            margin-bottom: 5px;
+            display: block;
+            color: #555;
+        }
+
+        .login-container input {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 14px;
+        }
+
+        .login-container input:focus {
+            border-color: #007BFF;
+            outline: none;
+            box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+        }
+
+        .login-container button {
+            width: 100%;
+            padding: 10px;
+            background-color: #007BFF;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        .login-container button:hover {
+            background-color: #0056b3;
+        }
+
+        .login-container .forgot-password {
+            text-align: center;
+            margin-top: 10px;
+            font-size: 14px;
+            color: #007BFF;
+        }
+
+        .login-container .forgot-password a {
+            text-decoration: none;
+            color: #007BFF;
+        }
+
+        .login-container .forgot-password a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="login-container">
+        <h1>用户登录</h1>
+        <form action="/login" method="post">
+            <label for="username">账号:</label>
+            <input type="text" id="username" name="username" placeholder="请输入账号" required>
+            
+            <label for="password">密码:</label>
+            <input type="password" id="password" name="password" placeholder="请输入密码" required>
+            
+            <button type="submit">登录</button>
+        </form>
+        <div class="forgot-password">
+            <a href=" /Users/mac/Desktop/工程实践3/templates/forget.html">忘记密码？</a>
+        </div>
+    </div>
+</body>
+</html>
